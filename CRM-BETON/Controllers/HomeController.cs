@@ -9,7 +9,7 @@ public class HomeController : Controller
     // Метод загрузки стартовой страницы
     public IActionResult Index()
     {
-        return View();
+        return View("Verification");
     }
 
 

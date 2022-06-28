@@ -74,13 +74,15 @@
 .td__ready,
 .th__balance,
 .td__balance,
+.td__address,
 .th__address,
-.td__address {
+.th__brand,
+.td__brand {
   width: 150px;
 }
 
-.th__brand,
-.td__brand {
+.th__filler,
+.td__filler {
   width: 350px;
 }
 
@@ -104,15 +106,67 @@
   flex-direction: column;
   overflow: scroll;
   padding-top: 30px;
-  padding-left: 40px;
+  padding-left: 10px;
   padding-right: 10px;
   align-items: flex-start;
   justify-content: flex-start;
-  width: calc(100vw - 66px);
+  width: calc(100vw - 36px);
   height: calc(100vh - 150px);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #ffffff;
+}
+
+.authorization-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authorization-page__title {
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #000000;
+}
+
+.authorization-page__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authorization-page__input {
+  width: 400px;
+  height: 50px;
+  margin-bottom: 15px;
+  padding-left: 50px;
+  border: none;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.authorization-page__input_last {
+  margin-bottom: 50px;
+}
+
+.authorization-page__button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #7C94FE;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.authorization-page__button:hover {
+  background-color: #ffffff;
+  border: 1px solid #7C94FE;
+  color: #7C94FE;
 }
 
 .button-section-block {
@@ -270,4 +324,14 @@
 /* стили для чекбокса, находящегося в состоянии disabled */
 .custom-checkbox:disabled + label::before {
   background-color: #e9ecef;
+}
+
+@media only screen and (max-width: 566px) {
+  .authorization-page {
+    width: calc(100vw);
+    height: calc(100vh - 120px);
+  }
+  .authorization-page__input {
+    width: 320px;
+  }
 }

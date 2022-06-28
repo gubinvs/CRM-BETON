@@ -34,6 +34,10 @@ body {
     display: flex;
 }
 
+aside {
+    margin-right: 10px;
+}
+
 
 //-- style for mobile deviсe
 @media only screen and (max-width: 566px) {
@@ -44,29 +48,13 @@ body {
     }
 }
 
-//-- import style 
+
+//-- import style for include
 @import 'header.scss';
+@import 'nav-panel.scss';
+@import 'authorization-page.scss';
 @import 'page.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import 'orders-page.scss';
 
 
 

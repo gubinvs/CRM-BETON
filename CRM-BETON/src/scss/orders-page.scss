@@ -1,0 +1,68 @@
+@import 'variables.scss';
+
+
+.orders-page__content-block {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-orders__title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.orders-form__item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.orders-form__button,
+.orders-form__lable,
+.orders-form__input {
+    display: flex;
+    align-items: center;
+    font-family: $ff_content;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid $col_7C94FE;
+}
+
+.orders-form__lable {
+    padding-left: 20px;
+}
+
+.orders-form__lable,
+.orders-form__input {
+    width: 400px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.orders-form__input {
+    margin-right: 0;
+}
+
+.orders-form__button {
+    width: 835px;
+    height: 40px;
+    margin-bottom: 100px;
+}
+
+.orders-form__button {
+    justify-content: center;
+    cursor: pointer;
+}
+
+.orders-form__button:hover {
+    background-color: $col_7C94FE;
+    border: 1px solid $col_7C94FE;
+    color: $col_ffffff;
+}
+
+
+
+

@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(100vw - 110px);
+    width: calc(100vw - 20px);
     height: calc(100vh - 120px);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -32,6 +32,10 @@
     padding-left: 50px;
     border: none;
     border-bottom: 1px solid $col_E4E4E4;
+}
+
+.authorization-page__input_last {
+    margin-bottom: 50px;
 }
 
 
@@ -65,5 +69,3 @@
         width: 320px;
     }
 }
-
-

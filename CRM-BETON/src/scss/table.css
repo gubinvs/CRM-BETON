@@ -57,9 +57,22 @@
 
 .th__date,
 .td__date,
+.th__sum,
+.td__sum,
+.th__ready,
+.td__ready,
+.th__balance,
+.td__balance,
+.th__address,
 .td__address,
-.th__address {
-  width: 140px;
+.th__brand,
+.td__brand {
+  width: 150px;
+}
+
+.th__filler,
+.td__filler {
+  width: 200px;
 }
 
 .th__execute-button_matching {
@@ -72,22 +85,6 @@
 
 .td__delete-button {
   border: 1px solid #F8C7B9;
-}
-
-.th__sum,
-.td__sum,
-.th__ready,
-.td__ready,
-.th__balance,
-.td__balance,
-.th__brand,
-.td__brand {
-  width: 150px;
-}
-
-.th__filler,
-.td__filler {
-  width: 200px;
 }
 
 .button-table {

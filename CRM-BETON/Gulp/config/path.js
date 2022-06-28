@@ -2,8 +2,8 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve()); 
 
-const buildFolder = `./wwwroot`;
-const srcFolder = `./src`;
+const buildFolder = `./CRM-BETON/wwwroot`;
+const srcFolder = `./CRM-BETON/src`;
 
 //-- Массив с данными о путях
 export const path = {

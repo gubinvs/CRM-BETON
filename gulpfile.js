@@ -3,10 +3,10 @@
 import gulp from "gulp";
 
 // Импортирую пути к файлам и директориям
-import { path } from "./gulp/config/path.js";
+import { path } from "./CRM-BETON/gulp/config/path.js";
 
 // Импорт общих плагинов
-import { plugins } from "./gulp/config/plugins.js";
+import { plugins } from "./CRM-BETON/gulp/config/plugins.js";
 
 // создаю глобальную переменную в которой буду хранить сущности
 global.app = {
@@ -18,26 +18,25 @@ global.app = {
 }
 
 // Импортирую таскс копирования файлов
-import { copy, copy_php } from "./gulp/tasks/copy.js";
-import { reset } from "./gulp/tasks/reset.js";
-import { html } from "./gulp/tasks/html.js";
-import { server } from "./gulp/tasks/server.js";
-import { scss } from "./gulp/tasks/scss.js";
-import { js } from "./gulp/tasks/js.js";
-import { images } from "./gulp/tasks/images.js";
-import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";        // преобразование шрифтов gulp.fonts
+import { copy, copy_php } from "./CRM-BETON/gulp/tasks/copy.js";
+import { reset } from "./CRM-BETON/gulp/tasks/reset.js";
+
+import { server } from "./CRM-BETON/gulp/tasks/server.js";
+import { scss } from "./CRM-BETON/gulp/tasks/scss.js";
+import { js } from "./CRM-BETON/gulp/tasks/js.js";
+import { images } from "./CRM-BETON/gulp/tasks/images.js";
+import { otfToTtf, ttfToWoff, fontsStyle } from "./CRM-BETON/gulp/tasks/fonts.js";        // преобразование шрифтов gulp.fonts
 
 // Наблюдатель за файлами
 function watcher() {
   gulp.watch(path.watch.files, copy)
-  gulp.watch(path.watch.pug, html)
   gulp.watch(path.watch.scss, scss)
   gulp.watch(path.watch.js, js)
   gulp.watch(path.watch.images, images)
 }
 
 // Методы объеденены в одне переменную, которые выполняются параллельно
-const mainTasks = gulp.parallel(copy, copy_php, html, scss, js, images);
+const mainTasks = gulp.parallel(copy, copy_php, scss, js, images);
 
 // Методы запуска основных плагинов
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

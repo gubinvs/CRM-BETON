@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 45px);
+    height: 100px;
+    padding-left: 25px;
+    padding-right: 20px;
+    background-color: #ffffff;
+}
+
+.header-logo-block {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo__img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.header-logo__name {
+    font-family: $ff_logo;
+    font-size: 36px;
+    color: $col_E4E4E4;
+
+}
+
+.header__authorization-block {
+    font-family: $ff_title;
+    font-size: 16px;
+    color: $col_E4E4E4;
+}

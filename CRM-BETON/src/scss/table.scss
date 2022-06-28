@@ -1,0 +1,103 @@
+@import 'variables.scss';
+
+//-- Стили для таблиц с данными
+
+.table__item {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.field-th {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $ff_content;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $col_E4E4E4;
+    color: $col_000000;
+    border: 1px solid $col_E4E4E4;
+}
+
+.field-td {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $ff_content;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $col_ffffff;
+    color: $col_000000;
+    border: 1px solid $col_E4E4E4;
+}
+
+.field-th:not(:last-of-type),
+.field-td:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.th__print-icon,
+.td__print-icon {
+    width: 50px;
+}
+
+.th__number,
+.td__number,
+.th__number_s,
+.td__number_s {
+    width: 60px;
+}
+
+.th__execute-button,
+.th__execute-button {
+    width: 90px;
+}
+
+.th__execute-button_matching {
+    width: 285px;
+}
+
+.td__execute-button_matching {
+    border: 1px solid $col_00B000;
+}
+
+.td__delete-button {
+    border: 1px solid $col_F8C7B9;
+}
+
+
+.th__date,
+.td__date,
+.th__sum,
+.td__sum,
+.th__ready,
+.td__ready,
+.th__balance,
+.td__balance,
+.th__address,
+.td__address {
+    width: 150px;
+}
+
+.th__brand,
+.td__brand {
+    width: 350px;
+}
+
+.button-table {
+    width: 90px;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: $col_7C94FE;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button-table:hover {
+    color: $col_7C94FE;
+}

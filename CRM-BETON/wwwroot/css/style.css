@@ -1,29 +1,8 @@
 @charset "UTF-8";
-
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
-::-webkit-input-placeholder {
-  font-family: "Roboto", sans-serif;
-  color: #E4E4E4;
-  font-size: 24px;
-}
-::-moz-placeholder {
-  font-family: "Roboto", sans-serif;
-  color: #E4E4E4;
-  font-size: 24px;
-}
-:-ms-input-placeholder {
-  font-family: "Roboto", sans-serif;
-  color: #E4E4E4;
-  font-size: 24px;
-}
-::-ms-input-placeholder {
-  font-family: "Roboto", sans-serif;
-  color: #E4E4E4;
-  font-size: 24px;
-}
 ::placeholder {
   font-family: "Roboto", sans-serif;
   color: #E4E4E4;
@@ -51,27 +30,21 @@ body {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  padding-left: 10px;
 }
 
-aside {
-  margin-right: 10px;
+@media only screen and (max-width: 566px) {
+  .sectiom-main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
 }
-
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: calc(100% - 50px);
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 45px);
   height: 100px;
   padding-left: 25px;
   padding-right: 20px;
@@ -79,12 +52,8 @@ aside {
 }
 
 .header-logo-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .header-logo__img {
@@ -105,130 +74,16 @@ aside {
   color: #E4E4E4;
 }
 
-.nav-panel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80px;
-  height: calc(100vh - 160px);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  background-color: #ffffff;
-}
-
-.nav-panel__img {
-  width: 40px;
-  height: 40px;
-}
-
-.authorization-page,
-.add-user-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: calc(100vw - 110px);
-  height: calc(100vh - 120px);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: #ffffff;
-}
-
-.add-user-page {
-  width: calc(100vw - 20px);
-}
-
-.authorization-page__title {
-  margin-bottom: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  color: #000000;
-}
-
-.authorization-page__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.authorization-page__input {
-  width: 400px;
-  height: 50px;
-  padding-left: 50px;
-  border: none;
-  border-bottom: 1px solid #E4E4E4;
-}
-
-.authorization-page__input:not(:last-of-type) {
-  margin-bottom: 15px;
-}
-
-.authorization-page__input:last-of-type {
-  margin-bottom: 70px;
-}
-
-.authorization-page__button {
-  width: 200px;
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #7C94FE;
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-}
-
-.authorization-page__button:hover {
-  background-color: #ffffff;
-  border: 1px solid #7C94FE;
-  color: #7C94FE;
-}
-
 .table__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 5px;
 }
 
 .field-th {
   height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -240,15 +95,9 @@ aside {
 
 .field-td {
   height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -326,24 +175,15 @@ aside {
 
 .page {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   overflow: scroll;
   padding-top: 30px;
   padding-left: 40px;
   padding-right: 10px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: calc(100vw - 160px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: calc(100vw - 66px);
   height: calc(100vh - 150px);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -351,14 +191,9 @@ aside {
 }
 
 .button-section-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-content: center;
+  justify-content: space-between;
   margin-bottom: 80px;
   width: 100%;
 }
@@ -424,15 +259,9 @@ aside {
 }
 
 .filter-period-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   margin-bottom: 23px;
 }
 
@@ -466,16 +295,9 @@ aside {
 }
 
 .custom-checkbox + label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  align-items: center;
+  user-select: none;
 }
 
 .custom-checkbox + label::before {
@@ -483,11 +305,8 @@ aside {
   display: inline-block;
   width: 1em;
   height: 1em;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
   border: 1px solid #adb5bd;
   border-radius: 0.25em;
   margin-right: 0.5em;
@@ -503,145 +322,27 @@ aside {
 }
 
 /* стили при наведении курсора на checkbox */
-
 .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
   border-color: #b3d7ff;
 }
 
 /* стили для активного состояния чекбокса (при нажатии на него) */
-
 .custom-checkbox:not(:disabled):active + label::before {
   background-color: #b3d7ff;
   border-color: #b3d7ff;
 }
 
 /* стили для чекбокса, находящегося в фокусе */
-
 .custom-checkbox:focus + label::before {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-
 .custom-checkbox:focus:not(:checked) + label::before {
   border-color: #80bdff;
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
-
 .custom-checkbox:disabled + label::before {
   background-color: #e9ecef;
-}
-
-.orders-page__content-block {
-  width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.page-orders__title {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
-}
-
-.orders-form__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.orders-form__button,
-.orders-form__lable,
-.orders-form__input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Mulish", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  border: 1px solid #7C94FE;
-}
-
-.orders-form__lable {
-  padding-left: 20px;
-}
-
-.orders-form__lable,
-.orders-form__input {
-  width: 400px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-.orders-form__input {
-  margin-right: 0;
-}
-
-.orders-form__button {
-  width: 835px;
-  height: 40px;
-  margin-bottom: 100px;
-}
-
-.orders-form__button {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-}
-
-.orders-form__button:hover {
-  background-color: #7C94FE;
-  border: 1px solid #7C94FE;
-  color: #ffffff;
-}
-
-@media only screen and (max-width: 566px) {
-  .sectiom-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-left: 0;
-  }
-
-  .nav-panel {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100vw;
-    height: 80px;
-    margin-bottom: 10px;
-  }
-
-  .nav-panel-pale {
-    display: none;
-  }
-
-  .authorization-page {
-    width: 100vw;
-    height: calc(100vh - 120px);
-  }
-
-  .authorization-page__input {
-    width: 320px;
-  }
 }

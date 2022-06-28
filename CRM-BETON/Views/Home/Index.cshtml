@@ -1,9 +1,38 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
+    ViewBag.Title = "Авторизация пользователя";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo-block">
+            <img class="header-logo__img" src="../img/logoMonolit.png" alt="Логотип в виде буквы м">
+            <div class="header-logo__name"></div>
+        </div>
+        <div class="header__authorization-block"></div>
+    </header>
+    <div class="container">
+        <main>
+            <div class="add-user-page">
+                <form class="authorization-page__form" method="post" asp-controller="Home" asp-action="Сheck">
+                    <label class="authorization-page__title" for="login">Авторизация</label>
+                    <input class="authorization-page__input" type="email" id="login" placeholder="login" name="login">
+                    <input class="authorization-page__input authorization-page__input_last" type="password" id="password" placeholder="password" name="password">
+                    <button class="authorization-page__button" type="submit">Войти</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 

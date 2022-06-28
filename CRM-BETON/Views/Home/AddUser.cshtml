@@ -1,7 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    Layout = null;
+    ViewData ["title"] = "Регистрация пользователя";
 }
-<h1>@ViewData["Title"]</h1>
-
-<p>Use this page to detail your site's privacy policy.</p>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>@ViewData</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo-block">
+            <img class="header-logo__img" src="../img/logoMonolit.png" alt="Логотип в виде буквы м">
+            <div class="header-logo__name"></div>
+        </div>
+        <div class="header__authorization-block"></div>
+    </header>
+    <div class="container">
+        <main>
+            <div class="add-user-page">
+                <form class="authorization-page__form" method="post" asp-controller="Home" asp-action="Registration">
+                    <label class="authorization-page__title" for="login">Регистрация пользователя</label>
+                    <input class="authorization-page__input" type="email" placeholder="login@gmail.com" name="login">
+                    <input class="authorization-page__input authorization-page__input_last" type="password" id="password" placeholder="password" name="password">
+                    <button class="authorization-page__button" type="submit">Войти</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

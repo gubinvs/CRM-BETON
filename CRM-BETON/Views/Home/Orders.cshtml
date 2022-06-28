@@ -1,0 +1,84 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "Оформление заявки";
+}
+
+
+<section class="orders">
+    <div class="page">
+        <div class="buton-section-block">
+            <h1 class="page__title page-orders__title">Оформление заказа:</h1>
+            <div class="hr"></div>
+        </div>
+        <div class="content-block orders-page__content-block">
+            <form method="post" asp-controller="Home" asp-action="AddNewOrder">
+                <ul class="orders-form__list">
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Марка бетона:</div>
+                        <select class="orders-form__input" name="brand">
+                            <option>B 7,5 M100</option>
+                            <option>B 12,5 M150</option>
+                            <option>B 15 M200</option>
+                            <option>B 20 M250</option>
+                            <option>B 22,5 M300</option>
+                            <option>B 25 M350</option>
+                            <option>B 30 M400</option>
+                        </select>
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Наполнитель:</div>
+                        <select class="orders-form__input" name="filler">
+                            <option>Гравий</option>
+                            <option>Щебень (доломитовый)</option>
+                            <option>Гравийный (щебень)</option>
+                            <option>Щебень (гранитный)</option>
+                        </select>
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Количество, м<sup>3</sup>:</div>
+                        <input class="orders-form__input" type="number" name="amount" step="0.1" min="0.3" placeholder="0.3">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Дата поставки:</div>
+                        <input class="orders-form__input" type="date" name="dateDelivery">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Время поставки:</div>
+                        <input class="orders-form__input" type="time" name="timeDelivery">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Адрес доставки:</div>
+                        <input class="orders-form__input" type="text" name="adressDelivery" placeholder="г. Пермь, ул. Промучасток, 40">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Цена реализации, за м<sup>3</sup>:</div>
+                        <input class="orders-form__input" type="number" name="sellingPrice" min="2800" step="50" placeholder="2800">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Стоимость доставки:</div>
+                        <input class="orders-form__input" type="number" name="priceDelivery" min="3600" step="1200" placeholder="3600">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Заказчик:</div>
+                        <input class="orders-form__input" type="text" name="customer" placeholder="Иванов Иван Иванович">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Телефон заказчика:</div>
+                        <input class="orders-form__input" type="tel" name="contact" placeholder="79220000033">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">Водитель:</div>
+                        <input class="orders-form__input" type="text" name="driver" placeholder="Петров Петр Петрович">
+                    </li>
+                    <li class="orders-form__item">
+                        <div class="orders-form__lable">№ автомобиля:</div>
+                        <input class="orders-form__input" type="text" name="numberCar" placeholder="а145нп">
+                    </li>
+                    <li class="orders-form__item">
+                        <button class="orders-form__button" type="submit" >Оформить заказ</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</section>

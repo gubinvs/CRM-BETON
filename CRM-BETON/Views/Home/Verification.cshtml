@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "Заявки на согласование";
+}
+
+<div class="page">
+    <div class="button-section-block">
+        <h2 class="page__title"> Заказы на согласование:</h2>
+        <form class="form-button-action" asp-controller="Home" asp-action="Orders">
+            <button class="button button-active">
+                Оформить заказ
+            </button>
+        </form>
+        <div class="hr"></div>
+    </div>
+    <div class="matching-block">
+        <div class="filter-period-block">
+            <div class="filter-period-block__name">Дата поставки:</div>
+            <label class="filter-period-block__lable-date" for="">от</label>
+            <input class="filter-period-block__input-date" type="date">
+            <label class="filter-period-block__lable-date" for=""> до</label>
+            <input class="filter-period-block__input-date" type="date"><img src="../img/icon/filter_icon.svg" alt="Облако со стрелками обмена данными">
+        </div>
+        <ul class="table__list table__list_verification-page">
+            <li class="table__item">
+                <div class="field-th th__print-icon">Print</div>
+                <div class="field-th th__number">№ п\п</div>
+                <div class="field-th th__date">Дата поставки</div>
+                <div class="field-th th__brand">Марка бетона</div>
+                <div class="field-th th__sum">Заказано, м<sup>3</sup></div>
+                <div class="field-th th__address">Адрес доставки</div>
+                <div class="field-th th__execute-button th__execute-button_matching">Операции</div>
+            </li>
+            <li class="table__item">
+                <div class="field-td td__print-icon"><img src="../img/icon/printer_icon.svg" alt="Принтер"></div>
+                <div class="field-td td__number">100</div>
+                <div class="field-td td__date">25.02.2022 11-00</div>
+                <div class="field-td td__brand">В 7,5 (М100) на щебне (доломитовом)</div>
+                <div class="field-td td__sum">30</div>
+                <div class="field-td td__address">
+                    <button class="button-table">Открыть</button>
+                </div>
+                <div class="field-td td__execute-button td__execute-button_matching">
+                    <button class="button-table">Принять</button>
+                </div>
+                <div class="field-td td__delete-button">
+                    <button class="button-table">Отклонить </button>
+                </div>
+                <div class="field-td td__edit-button">
+                    <button class="button-table">Изменить</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
